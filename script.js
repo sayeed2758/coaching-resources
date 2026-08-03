@@ -1,99 +1,92 @@
-const data = {
-
-"6":{
-
-"Mathematics":[
-"Knowing Our Numbers",
-"Whole Numbers",
-"Playing With Numbers"
-],
-
-"Science":[
-"Food: Where Does It Come From?",
-"Components of Food",
-"Fibre to Fabric"
-],
-
-"English":[
-"Honeysuckle",
-"A Pact With The Sun"
-],
-
-"Hindi":[
-"वसंत",
-"बाल रामकथा"
-]
-
-},
-
-"7":{
-
-"Mathematics":["Integers","Fractions"],
-
-"Science":["Nutrition in Plants","Nutrition in Animals"]
-
-},
-
-"8":{},
-
-"9":{},
-
-"10":{}
-
-};
+let currentClass = "";
+let currentSubject = "";
 
 function openClass(cls){
 
-let html="<h2>Class "+cls+"</h2>";
+currentClass = cls;
 
-html+="<div class='class-grid'>";
+let html = "<h2>📚 Class " + cls + "</h2>";
+html += "<div class='class-grid'>";
 
-for(let subject in data[cls]){
-
-html+="<div class='class-card' onclick=\"openSubject('"+cls+"','"+subject+"')\">"+subject+"</div>";
-
+for (let subject in resources[cls]) {
+    html += `
+    <div class="class-card"
+    onclick="openSubject('${subject}')">
+    ${subject}
+    </div>`;
 }
 
-html+="</div>";
+html += "</div>";
 
-document.getElementById("content").innerHTML=html;
+document.getElementById("content").innerHTML = html;
 
-}
-
-function openSubject(cls,subject){
-
-let html="<h2>"+subject+"</h2>";
-
-html+="<div class='class-grid'>";
-
-data[cls][subject].forEach(chapter=>{
-
-html+="<div class='class-card' onclick=\"openChapter('"+chapter+"')\">"+chapter+"</div>";
-
+window.scrollTo({
+top:500,
+behavior:"smooth"
 });
 
-html+="</div>";
+}
 
-document.getElementById("content").innerHTML=html;
+function openSubject(subject){
+
+currentSubject = subject;
+
+let html = "<h2>📖 " + subject + "</h2>";
+html += "<div class='class-grid'>";
+
+for (let chapter in resources[currentClass][subject]) {
+
+html += `
+<div class="class-card"
+onclick="openChapter('${chapter}')">
+${chapter}
+</div>`;
+
+}
+
+html += "</div>";
+
+document.getElementById("content").innerHTML = html;
 
 }
 
 function openChapter(chapter){
 
-let html="<h2>"+chapter+"</h2>";
+let item =
+resources[currentClass][currentSubject][chapter];
 
-html+="<div class='class-grid'>";
+let html = `
+<h2>${chapter}</h2>
 
-html+="<a class='class-card' target='_blank' href='https://drive.google.com/'>📄 Notes</a>";
+<div class="class-grid">
 
-html+="<a class='class-card' target='_blank' href='https://drive.google.com/'>📊 PPT</a>";
+<a class="class-card"
+href="${item.notes}"
+target="_blank">
+📄 Notes
+</a>
 
-html+="<a class='class-card' target='_blank' href='https://drive.google.com/'>📝 Short Notes</a>";
+<a class="class-card"
+href="${item.ppt}"
+target="_blank">
+📊 PPT
+</a>
 
-html+="<a class='class-card' target='_blank' href='https://drive.google.com/'>📚 Worksheet</a>";
+<a class="class-card"
+href="${item.shortnotes}"
+target="_blank">
+📝 Short Notes
+</a>
 
-html+="</div>";
+<a class="class-card"
+href="${item.worksheet}"
+target="_blank">
+📚 Worksheet
+</a>
 
-document.getElementById("content").innerHTML=html;
+</div>
+`;
+
+document.getElementById("content").innerHTML = html;
 
 }
