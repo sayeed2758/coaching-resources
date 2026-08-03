@@ -91,3 +91,32 @@ target="_blank">
 document.getElementById("content").innerHTML = html;
 
 }
+function showNavigation(){
+    document.getElementById("navigation").style.display = "block";
+}
+
+function hideNavigation(){
+    document.getElementById("navigation").style.display = "none";
+}
+
+function goHome(){
+    location.reload();
+}
+
+function goBack(){
+
+    if(currentPage==="chapter"){
+        openSubject(currentSubject);
+        currentPage="subject";
+    }
+
+    else if(currentPage==="subject"){
+        openClass(currentClass);
+        currentPage="class";
+    }
+
+    else{
+        goHome();
+    }
+
+}
