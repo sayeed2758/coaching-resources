@@ -173,3 +173,11 @@ html+="</div>";
 document.getElementById("content").innerHTML=html;
 
 });
+function openSearchResult(cls,subject,chapter){
+
+currentClass=cls;
+currentSubject=subject;
+
+openChapter(chapter);
+
+}
