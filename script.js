@@ -120,3 +120,56 @@ function goBack(){
     }
 
 }
+const searchBox = document.getElementById("searchBox");
+
+searchBox.addEventListener("keyup", function () {
+
+let value = this.value.toLowerCase();
+
+if(value==""){
+document.getElementById("content").innerHTML="";
+return;
+}
+
+let html="<h2>🔍 Search Results</h2>";
+html+="<div class='class-grid'>";
+
+for(let cls in resources){
+
+for(let subject in resources[cls]){
+
+for(let chapter in resources[cls][subject]){
+
+if(
+
+chapter.toLowerCase().includes(value) ||
+
+subject.toLowerCase().includes(value) ||
+
+("class "+cls).includes(value)
+
+){
+
+html+=`
+<div class="class-card"
+onclick="openSearchResult('${cls}','${subject}','${chapter}')">
+
+<b>Class ${cls}</b><br>
+${subject}<br><br>
+${chapter}
+
+</div>`;
+
+}
+
+}
+
+}
+
+}
+
+html+="</div>";
+
+document.getElementById("content").innerHTML=html;
+
+});
