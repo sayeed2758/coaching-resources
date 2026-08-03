@@ -1,7 +1,29 @@
 html{
 scroll-behavior:smooth;
 }
+.welcome{
 
+text-align:center;
+
+margin:20px;
+
+}
+
+.welcome h2{
+
+font-size:32px;
+
+margin-bottom:10px;
+
+}
+
+.welcome p{
+
+font-size:18px;
+
+color:#666;
+
+}
 body{
 margin:0;
 padding:0;
