@@ -1,3 +1,4 @@
+let currentPage = "home";
 let currentClass = "";
 let currentSubject = "";
 
