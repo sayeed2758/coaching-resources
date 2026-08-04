@@ -158,24 +158,45 @@ gap:18px;
 width:92%;
 margin:25px auto;
 }
-
 .class-card{
 background:#fff;
-padding:30px;
-border-radius:20px;
+border-radius:18px;
+padding:30px 20px;
 text-align:center;
-font-size:24px;
-font-weight:bold;
 cursor:pointer;
-box-shadow:0 8px 20px rgba(0,0,0,.08);
 transition:.3s;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.class-card span{
+font-size:42px;
+display:block;
+margin-bottom:10px;
+}
+
+.class-card h3{
+font-size:24px;
+margin-bottom:8px;
+color:#1565ff;
+}
+
+.class-card p{
+color:#666;
+font-size:16px;
 }
 
 .class-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(21,101,255,.25);
 background:#1565ff;
 color:#fff;
-transform:translateY(-5px);
 }
+
+.class-card:hover h3,
+.class-card:hover p{
+color:#fff;
+}
+
 
 /* ===== FOOTER ===== */
 
