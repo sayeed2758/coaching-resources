@@ -341,3 +341,36 @@ body{
 padding-bottom:0;
 }
 }
+/* Latest Updates */
+
+.updates{
+width:92%;
+max-width:1100px;
+margin:40px auto;
+}
+
+.updates h2{
+text-align:center;
+margin-bottom:20px;
+font-size:32px;
+}
+
+.updates-list{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.update-card{
+background:#fff;
+padding:18px 22px;
+border-left:6px solid #1565ff;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,.08);
+font-size:17px;
+transition:.3s;
+}
+
+.update-card:hover{
+transform:translateX(8px);
+}
