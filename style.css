@@ -394,3 +394,52 @@ grid-template-columns:repeat(2,1fr);
 }
 
 }
+.hero-banner{
+
+background:linear-gradient(135deg,#2563eb,#0f172a);
+
+padding:60px 20px;
+
+text-align:center;
+
+color:white;
+
+border-radius:0 0 30px 30px;
+
+}
+
+.hero-banner h1{
+
+font-size:40px;
+
+margin-bottom:15px;
+
+}
+
+.hero-banner p{
+
+font-size:20px;
+
+margin-bottom:25px;
+
+}
+
+.hero-banner button{
+
+padding:15px 30px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:30px;
+
+background:white;
+
+color:#2563eb;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
