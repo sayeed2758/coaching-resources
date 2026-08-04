@@ -1,3 +1,11 @@
+const classIcons = {
+"6":"📘",
+"7":"📗",
+"8":"📙",
+"9":"📕",
+"10":"🎓"
+};
+
 const subjectIcons = {
 "Mathematics":"➗",
 "Science":"🔬",
