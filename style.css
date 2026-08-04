@@ -85,14 +85,14 @@ margin:auto;
 .class-card{
     background:#ffffff;
     border-radius:20px;
-    padding:30px 20px;
+    padding:25px;
     text-align:center;
     cursor:pointer;
     font-size:24px;
-    font-weight:bold;
-    color:#1e293b;
+    font-weight:700;
+    color:#222;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:0.3s;
+    transition:all .3s ease;
     border:2px solid transparent;
 }
 
