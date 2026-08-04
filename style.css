@@ -60,14 +60,16 @@ text-align:center;
 }
 
 #searchBox{
-width:95%;
-max-width:500px;
-padding:15px;
-border:none;
-border-radius:10px;
-font-size:17px;
-box-shadow:0 5px 15px rgba(0,0,0,.15);
-margin-bottom:30px;
+    width:90%;
+    max-width:650px;
+    padding:18px 22px;
+    border:none;
+    border-radius:50px;
+    font-size:18px;
+    display:block;
+    margin:30px auto;
+    box-shadow:0 10px 25px rgba(0,0,0,.10);
+    outline:none;
 }
 
 .class-grid{
@@ -79,20 +81,24 @@ margin:auto;
 }
 
 .class-card{
-background:white;
-padding:35px 20px;
-border-radius:14px;
-font-size:22px;
-font-weight:bold;
-cursor:pointer;
-transition:.3s;
-box-shadow:0 8px 20px rgba(0,0,0,.12);
+    background:#ffffff;
+    border-radius:20px;
+    padding:30px 20px;
+    text-align:center;
+    cursor:pointer;
+    font-size:24px;
+    font-weight:bold;
+    color:#1e293b;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:0.3s;
+    border:2px solid transparent;
 }
 
 .class-card:hover{
-background:#2563eb;
-color:white;
-transform:translateY(-6px);
+    transform:translateY(-8px);
+    border-color:#2563eb;
+    background:#2563eb;
+    color:#fff;
 }
 
 #content{
