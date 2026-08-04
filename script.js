@@ -22,7 +22,7 @@ for (let subject in resources[cls]) {
     html += `
     <div class="class-card"
     onclick="openSubject('${subject}')">
-    ${subject}
+    ${subjectIcons[subject] || "📘"}<br>${subject}
     </div>`;
 }
 
