@@ -1,3 +1,12 @@
+const subjectIcons = {
+"Mathematics":"➗",
+"Science":"🔬",
+"English":"🇬🇧",
+"Hindi":"🇮🇳",
+"Social Science":"🌍",
+"Sanskrit":"🕉️",
+"Computer":"💻"
+};
 let currentPage = "home";
 let currentClass = "";
 let currentSubject = "";
