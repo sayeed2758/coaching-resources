@@ -449,3 +449,26 @@ font-weight:bold;
 cursor:pointer;
 
 }
+.subject-card{
+    background:#ffffff;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+    cursor:pointer;
+}
+
+.subject-card:hover{
+    background:#2563eb;
+    color:#fff;
+    transform:translateY(-8px);
+}
+
+.subject-icon{
+    font-size:40px;
+    display:block;
+    margin-bottom:10px;
+}
